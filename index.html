@@ -10,12 +10,30 @@
     <div class="card">
         <div class="search">
             <input type="text" placeholder="Plaats" spellcheck="false">
-            <button>Zoek</button>
+            <button>
+                <img id="search-icon" src="Images/search.png">
+            </button>
         </div>
         <div class="weather">
-            <img src="images/rain.svg" alt="weather-icon">
+            <img src="images/clear.png" alt="weather-icon">
             <h1 class="temp">22°C</h1>
             <h2 class="city">Amsterdam</h2>
+            <div class="details">
+                <div class="col">
+                    <img class="detail-foto" src="Images/humidity.png" alt="mist" />
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <img class="detail-foto" src="Images/wind.png" alt="mist" />
+                        <p class="wind">15 km/h</p>
+                        <p>Windspeed</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

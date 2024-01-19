@@ -26,22 +26,27 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    background-color: #1dacff;
+    border-radius: 32rem;
 }
 
-img {
-    padding: 2rem;
+
+.detail-foto {
+    padding: 0;
+    width: 4rem;
 }
 
 button {
-    background-color: #EFEFEF;
-    border-radius: 8rem;
+    background-color: transparent;
     border: none;
-    color: #00395b;
     font-weight: 600;
-    padding: 1rem 2rem;
     text-align: center;
     text-decoration: none;
-    font-size: 1rem;
+    padding-right: 1rem;
+}
+
+#search-icon {
+    width: 1.5rem;
 }
 
 input {
@@ -52,6 +57,11 @@ input {
     text-align: left;
     font-size: 1rem;
 }
+
+input:focus {
+    outline: none;
+}
+
 ::placeholder {
     color: rgb(0,57,91);
   }
@@ -60,3 +70,16 @@ input {
     padding: 0;
     margin: 0;
   }
+
+.details {
+    display: flex;
+    padding-top: 2rem;
+    gap: 4rem;
+    justify-content: center;
+    align-items: end;
+}
+
+p {
+    margin: 0;
+    padding: 0.25rem;
+}

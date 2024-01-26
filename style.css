@@ -6,7 +6,11 @@ body {
     justify-content: center;
     height: 100vh;
     color: #EFEFEF;
-    font-family: Helvetica, sans-serif
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    padding: 4px;
 }
 
 .card {
@@ -56,6 +60,7 @@ input {
     border-radius: 8rem;
     border: none;
     padding: 1rem 2rem;
+    width: 100%;
     text-align: left;
     font-size: 1rem;
 }

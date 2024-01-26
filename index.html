@@ -58,11 +58,12 @@
                 document.querySelector(".weather").style.display = "none"
             } else {
                 document.querySelector(".error").style.display = "none"
-
                 document.querySelector(".city").innerHTML = data.name;
                 document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
                 document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
                 document.querySelector(".wind").innerHTML = Math.round(data.wind.speed) + " km/u";
+
+                const WeatherDescription = data.weather[0].description
 
                 if (data.weather[0].main == "Clouds") {
                     weatherIcon.src = "Images/clouds.svg";
@@ -78,12 +79,15 @@
                     weatherIcon.src = "Images/drizzle.svg";
                 }
 
-                if (data.weather[0].main == "Clear") {
+                if (["clear sky", "broken clouds", "scattered clouds", "few clouds"].includes(WeatherDescription)) {
                     document.querySelector(".card").style.background = "linear-gradient(130deg, rgba(0,57,91,1) 0%, rgba(29,172,255,1) 100%)"
-                } else {
+                } else if (["overcast clouds","snow", "light rain", "light snow"].includes(WeatherDescription)){
                     document.querySelector(".card").style.background = "linear-gradient(130deg, rgba(0,66,106,1) 0%, rgba(121,121,121,1) 100%)";
+                } else if (WeatherDescription == "mist") {
+                    document.querySelector(".card").style.background = "linear-gradient(130deg, rgba(201,201,201,1) 0%, rgba(108,108,108,1) 100%)"
                 }
-
+                
+                console.log(data.weather[0].description)
                 document.querySelector(".weather").style.display = "block"
 
             }

@@ -31,7 +31,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: #1dacff;
+    background-color: rgba(0,158,255,0.2);
     border-radius: 32rem;
 }
 
@@ -55,7 +55,7 @@ button {
 }
 
 input {
-    background-color: #1dacff;
+    background-color: transparent;
     color: #EFEFEF;
     border-radius: 8rem;
     border: none;
